@@ -133,12 +133,13 @@ The history object is part of the window object and is accessed through the wind
 <textarea>
 	
 console.log(history.length);
-<button onclick="goBack()">Go Back</button>
-<script>
+
 function goBack() {
-    	window.history.back();
+	window.history.back();
 }
-</script>
+
+//goBack();
+
 
 </textarea>
 <button type="button">Reset</button><button type="submit">Run</button>
@@ -154,7 +155,7 @@ Object screen contains information about display, including it’s width and hei
 //console.log(window.screen);
 
 </textarea>
-	<button type="button">Reset</button><button type="submit">Run</button>
+<button type="button">Reset</button><button type="submit">Run</button>
 </form>
 
 <h3>window object main methods</h3>
@@ -164,13 +165,13 @@ window.alert(); window.confirm(); winodw.prompt(); window.open(); window.print()
 <form>
 <textarea>
 	
-alert(“This is the test”);
+alert("This is the test");
 
-//confirm(“Do you want to proceed?”);
+//confirm("Do you want to proceed?");
 
-//prompt(“What’s your name?”,”Wouldn’t you like to know…”);
+//prompt("What’s your name?","Wouldn’t you like to know…");
 
-//window.open(“http://midiman-midi.com”,”test”,”width=600,height=400,toolbar=no,location=no”);
+//window.open("http://midiman-midi.com","test","width=600,height=400,toolbar=no,location=no");
 
 </textarea>
 <button type="button">Reset</button><button type="submit">Run</button>
@@ -239,9 +240,9 @@ var att = document.createAttribute("id");
 <form>
 <textarea>
 	
-var newDiv = document.createElement(“div”);
-//var newP = document.createElement(“p”);
-//var newText = document.createTextNode(“New paragraph”);
+var newDiv = document.createElement("div");
+//var newP = document.createElement("p");
+//var newText = document.createTextNode("New paragraph");
 //newP.appendChild(newText);
 //newDiv.appendChild(newP);
 

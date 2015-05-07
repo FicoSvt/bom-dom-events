@@ -84,7 +84,9 @@ The document object provides properties and methods to access all node objects, 
 </pre>
 <form>
 <textarea>
+	
 //console.log(document);
+
 </textarea>
 <button type="button">Reset</button><button type="submit">Run</button>
 </form>
@@ -95,6 +97,7 @@ The navigator object contains information about the browser, like the userAgent,
 </pre>
 <form>
 <textarea>
+	
 console.log(navigator.userAgent);
 //console.log(navigator.appName);
 //console.log(navigator.appCodeName);
@@ -114,10 +117,12 @@ console.log(navigator.userAgent);
 The location object is part of the window object and is accessed through the window.location property.
 </pre>
 <form>
-	<textarea>
-		console.log(window.location.host);
-	</textarea>
-	<button type="button">Reset</button><button type="submit">Run</button>
+<textarea>
+	
+console.log(window.location.host);
+	
+</textarea>
+<button type="button">Reset</button><button type="submit">Run</button>
 </form>
 
 <h3>winodw.history</h3>
@@ -125,59 +130,58 @@ The location object is part of the window object and is accessed through the win
 The history object is part of the window object and is accessed through the window.history property.
 </pre>
 <form>
-	<textarea>
-		console.log(history.length);
-	 	<button onclick="goBack()">Go Back</button>
-		<script>
-			function goBack() {
-	    			window.history.back();
-			}
-		</script>
-	</textarea>
-	<button type="button">Reset</button><button type="submit">Run</button>
+<textarea>
+	
+console.log(history.length);
+<button onclick="goBack()">Go Back</button>
+<script>
+function goBack() {
+    	window.history.back();
+}
+</script>
+
+</textarea>
+<button type="button">Reset</button><button type="submit">Run</button>
 </form>
 
 <h3>window.screen</h3>
 <pre>
-	Object screen contains information about display, including it’s width and height and many other useful informations. Although not used frequently, it’s a good information source for functionalities that could change width or height of the browser window.
+Object screen contains information about display, including it’s width and height and many other useful informations. Although not used frequently, it’s a good information source for functionalities that could change width or height of the browser window.
 </pre>
 <form>
-	<textarea>
-		//console.log(window.screen);
-	</textarea>
+<textarea>
+	
+//console.log(window.screen);
+
+</textarea>
 	<button type="button">Reset</button><button type="submit">Run</button>
 </form>
 
 <h3>window object main methods</h3>
 <pre>
-	window.alert(); window.confirm(); winodw.prompt(); window.open(); window.print(); window.scrollTo();	
+window.alert(); window.confirm(); winodw.prompt(); window.open(); window.print(); window.scrollTo();	
 </pre>
 <form>
-	<textarea>
-		alert(“This is the test”);
+<textarea>
+	
+alert(“This is the test”);
 
-		//confirm(“Do you want to proceed?”);
+//confirm(“Do you want to proceed?”);
 
-		//prompt(“What’s your name?”,”Wouldn’t you like to know…”);
-		
-		//window.open(“http://midiman-midi.com”,”test”,”width=600,height=400,toolbar=no,location=no”);
-	</textarea>
-	<button type="button">Reset</button><button type="submit">Run</button>
-</form>
+//prompt(“What’s your name?”,”Wouldn’t you like to know…”);
 
-<h3></h3>
-<pre></pre>
-<form>
-	<textarea></textarea>
-	<button type="button">Reset</button><button type="submit">Run</button>
+//window.open(“http://midiman-midi.com”,”test”,”width=600,height=400,toolbar=no,location=no”);
+
+</textarea>
+<button type="button">Reset</button><button type="submit">Run</button>
 </form>
 
 <h2>DOM - Document object model</h2>
 
 <h3>Html DOM</h3>
 <pre>
-	When a web page is loaded, the browser creates a Document Object Model of the page.
-	<img src="assets/bom.png" />
+When a web page is loaded, the browser creates a Document Object Model of the page.
+<img src="assets/bom.png" />
 </pre>
 <pre>
 The HTML DOM model is constructed as a tree of Objects:
@@ -185,18 +189,15 @@ With the object model, JavaScript gets all the power it needs to create dynamic 
 The HTML DOM is a standard object model and programming interface for HTML. 
 It defines:
 <ul>
-	<li>The HTML elements as objects</li>
-    	<li>The properties of all HTML elements</li>
-    	<li>The methods to access all HTML elements</li>
-    	<li>The events for all HTML elements</li>
+<li>The HTML elements as objects</li>
+<li>The properties of all HTML elements</li>
+<li>The methods to access all HTML elements</li>
+<li>The events for all HTML elements</li>
 </ul>
 In the DOM, all HTML elements are defined as objects.
-
 Html tags + Text + Comments + .. (NODES)
 The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
-
 Child, parent, sibling, ancestor, descendant.
-
 </pre>
 <h3>Document object</h3>
 <pre>
@@ -205,16 +206,17 @@ The document object provides properties and methods to access all node objects, 
 </pre>
 
 <form>
-	<textarea>
-		console.log(document);
-		
-		//var h1 = document.getElementsByTagName("H1")[0];
+<textarea>
 	
-		//document.getElementById('test');
-	</textarea>
-	<button type="button">Reset</button><button type="submit">Run</button>
-</form>
+console.log(document);
 
+//var h1 = document.getElementsByTagName("H1")[0];
+
+//document.getElementById('test');
+
+</textarea>
+<button type="button">Reset</button><button type="submit">Run</button>
+</form>
 <h3>Element object</h3>
 <pre>
 In the HTML DOM, the Element object represents an HTML element. Element objects can have child nodes of type element nodes, text nodes, or comment nodes. 
@@ -222,55 +224,61 @@ A NodeList object represents a list of nodes, like an HTML element's collection 
 Elements can also have attributes.
 </pre>
 <form>
-	<textarea>
-		var att = document.createAttribute("id");
-		//att.value("test");
-		//h1.setAttributeNode(att); 
+<textarea>
+	
+var att = document.createAttribute("id");
+//att.value("test");
+//h1.setAttributeNode(att); 
 
-	</textarea>
-	<button type="button">Reset</button><button type="submit">Run</button>
+</textarea>
+<button type="button">Reset</button><button type="submit">Run</button>
 </form>
 
 <h3>DOM manipulation</h3>
 
 <form>
-	<textarea>
-		var newDiv = document.createElement(“div”);
-		//var newP = document.createElement(“p”);
-		//var newText = document.createTextNode(“New paragraph”);
-		//newP.appendChild(newText);
-		//newDiv.appendChild(newP);
+<textarea>
+	
+var newDiv = document.createElement(“div”);
+//var newP = document.createElement(“p”);
+//var newText = document.createTextNode(“New paragraph”);
+//newP.appendChild(newText);
+//newDiv.appendChild(newP);
 
-	// insertBefore(); replaceChild(); removeChild(); appendChild();
+// insertBefore(); replaceChild(); removeChild(); appendChild();
 
-	</textarea>
-	<button type="button">Reset</button><button type="submit">Run</button>
+</textarea>
+<button type="button">Reset</button><button type="submit">Run</button>
 </form>
 
 <h3>Selectors</h3>
 <pre>Oldies</pre>
 <form>
-	<textarea>
-		document.getElementById();
-		document.getElementsByTagName();
-		Element.getElementsByTagName();
-		document.getElementsByName(name);
-		document.anchors
-		document.forms
-		document.images
-		document.links
-	</textarea>
-	<button type="button">Reset</button><button type="submit">Run</button>
+<textarea>
+	
+document.getElementById();
+document.getElementsByTagName();
+Element.getElementsByTagName();
+document.getElementsByName(name);
+document.anchors
+document.forms
+document.images
+document.links
+
+</textarea>
+<button type="button">Reset</button><button type="submit">Run</button>
 </form>
 
 <form>
-	<textarea>
-		document.getElementsByClassName()
-		Element.getElementsByClassName()
-		element = document.querySelector(selectors);
-		elementList = document.querySelectorAll(selectors);
-	</textarea>
-	<button type="button">Reset</button><button type="submit">Run</button>
+<textarea>
+	
+document.getElementsByClassName()
+Element.getElementsByClassName()
+element = document.querySelector(selectors);
+elementList = document.querySelectorAll(selectors);
+
+</textarea>
+<button type="button">Reset</button><button type="submit">Run</button>
 </form>
 
 <h2>Events</h2>
@@ -308,7 +316,7 @@ console.log(123);
 -->
 
 
-<p class="foot">2015 Ivan Weiler, Inchoo</p>
+<p class="foot">2015 Filip Svetličić, Inchoo</p>
 
 <script src="engine/jquery-2.0.3.min.js"></script>
 <script src="engine/codemirror/codemirror.js"></script>

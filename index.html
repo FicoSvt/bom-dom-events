@@ -73,897 +73,212 @@ Example of relations between objects in BOM
 
 </pre>
 
-<h3>Basic types</h3>
-<form>
-<textarea>
-//number
-var n = 5;
-//string
-var s = "Department of Mathematics";
-//boolean
-var b = true;
+<h3>window.document</h3>
 
-//array, object
-
-//function
-function f() {
-	console.log("Function triggered!");
-}
-
-//run function
-f();
-
-//var f = function(){}
-//var n = 5.5;
-
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-
-<h3>Array</h3>
-<form>
-<textarea>
-var a1 = new Array(1, 2, 3);
-var a2 = new Array("one", "two", "three");
-
-console.log(a1);
-
-//console.log(a2[0]);
-//console.log(a2.length);
-
-//change third value of a1 to 5
-
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>Array has Keys and Values.
-"length" is property of String and Array only.i
-</pre>
-
-<h3>Array short syntax</h3>
-<form>
-<textarea>
-var a1 = new Array(1, 2, 3);
-var a2 = [1, 2, 3];
-
-console.log(a1);
-console.log(a2);
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-
-<h3>Array - example 1</h3>
-<form>
-<textarea>
-var a = [true, 2, 3, ["one", "two", "three"]];
-
-console.log(a[3]);
-
-//log value "three"
-//console.log(?)
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-
-<h3>Object</h3>
-<form>
-<textarea>
-var o = new Object();
-o["key1"] = "one";
-o["key2"] = "two";
-
-console.log(o);
-console.log(o["key1"]);
-
-//set new key3 property of o
-
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>Same as Array but with named keys.</pre>
-
-<h3>Object short syntax</h3>
-<form>
-<textarea>
-var o1 = new Object();
-o1["key1"] = "one";
-o1["key2"] = "two";
-
-var o2 = {key1:"one", key2:"two"};
-
-console.log(o1);
-console.log(o2);
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre></pre>
-
-
-<h3>Object access</h3>
-<form>
-<textarea>
-var o = {key1:"one", key2:"two", 1337:"three"};
-
-console.log(o["key1"]);
-console.log(o.key1);
-
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre></pre>
-
-<h3>Object method</h3>
-<form class="large">
-<textarea>
-var o = {a:1, b:2, c:3};
-o.test = function() {
-	console.log("Function triggered");
-};
-
-o.test();
-
-//move test method inside declaration
-//define second method getName that logs your name
-//declare o2 object with same properties and methods using new Object() syntax
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre></pre>
-
-<h3>FOR IN statement</h3>
-<form>
-<textarea>
-var a = [1,2,3];
-for (var i = 0; i < a.length; i++) {
-	console.log(a[i]);
-}
-
-var o = {a:1, b:2, c:3};
-//FOR every property IN object
-for (var i in o) {
-	console.log(i + ":" + o[i]);
-}
-
-</textarea>
-<button type="button">Reset</button>
-<button type="submit">Run</button>
-</form>
 <pre>
-Loop through Arrays using for loop and through Objects using for-in loop.
-Use Object.hasOwnProperty() to filter if needed (or Object.keys()).
+Returns the Document object for the window.
+When an HTML document is loaded into a web browser, it becomes a document object.
+The document object is the root node of the HTML document and the "owner" of all other nodes:
+(element nodes, text nodes, attribute nodes, and comment nodes).
+The document object provides properties and methods to access all node objects, from within JavaScript.
 </pre>
-
-<h3>Back to start</h3>
-<form class="large">
+<form>
 <textarea>
-//number
-var n = 5;
-//string
-var s = "Department of Mathematics";
-//boolean
-var b = true;
-//array
-var a = [1,2,3];
-//object
-var o = {"key1":"value1", "key2":"value2", 5: 88};
-//function
-var f = function(){};
-
-console.log(typeof n, typeof s, typeof b, typeof a, typeof o, typeof f);
-console.log(s.substr(14,11));
-//@question: how come this works?
-
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre></pre>
-
-<h3>Everything is an Object</h3>
-<form class="large">
-<textarea>
-var n = new Number(5);
-var s = new String("Department");
-var b = new Boolean(true);
-var a = new Array(1,2,3);
-var o = new Object();
-var f = new Function();
-
-console.log(typeof s);
-//s = s + " of Mathematics";
-//console.log(typeof s);
+//console.log(document);
 </textarea>
 <button type="button">Reset</button><button type="submit">Run</button>
 </form>
 
-
-<h3>Global and Element Objects</h3>
+<h3>window.navigator</h3>
 <pre>
-There are many other built in object like Math, JSON, Date, RegExp ..
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
-
-Also, every html element is an object.
+The navigator object contains information about the browser, like the userAgent, product etc.
 </pre>
-
-<h3>Questions</h3>
 <form>
 <textarea>
-//playground
+console.log(navigator.userAgent);
+//console.log(navigator.appName);
+//console.log(navigator.appCodeName);
+//console.log(navigator.appVersion);
+//console.log(navigator.platform);
+
+/* for (var i = 0; i < navigator.plugins.length; i++) {
+	console.log(navigator.plugins[i].description);
+} */
+
 </textarea>
 <button type="button">Reset</button><button type="submit">Run</button>
 </form>
 
-<h3>Todo</h3>
+<h3>window.location</h3>
+<pre>The location object contains information about the current URL.
+The location object is part of the window object and is accessed through the window.location property.
+</pre>
+<form>
+	<textarea>
+		console.log(window.location.host);
+	</textarea>
+	<button type="button">Reset</button><button type="submit">Run</button>
+</form>
+
+<h3>winodw.history</h3>
+<pre>The history object contains the URLs visited by the user (within a browser window).
+The history object is part of the window object and is accessed through the window.history property.
+</pre>
+<form>
+	<textarea>
+		console.log(history.length);
+	 	<button onclick="goBack()">Go Back</button>
+		<script>
+			function goBack() {
+	    			window.history.back();
+			}
+		</script>
+	</textarea>
+	<button type="button">Reset</button><button type="submit">Run</button>
+</form>
+
+<h3>window.screen</h3>
 <pre>
-CodeAcademy courses - Data structures
-http://www.codecademy.com/en/tracks/javascript
+	Object screen contains information about display, including it’s width and height and many other useful informations. Although not used frequently, it’s a good information source for functionalities that could change width or height of the browser window.
 </pre>
+<form>
+	<textarea>
+		//console.log(window.screen);
+	</textarea>
+	<button type="button">Reset</button><button type="submit">Run</button>
+</form>
 
-<h3>Resources</h3>
+<h3>window object main methods</h3>
 <pre>
-http://www.w3schools.com/js/default.asp
-http://www.w3schools.com/jsref/default.asp
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
+	window.alert(); window.confirm(); winodw.prompt(); window.open(); window.print(); window.scrollTo();	
 </pre>
-
-
-<h2>Prototyping</h2>
-
-<h3>What is OOP?</h3>
-<pre>
-Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which are data structures that contain data, in the form of fields, often known as attributes or properties; and code, in the form of procedures, often known as methods.
-
-Class vs. Object - An object is an instance of a class
-</pre>
-
-<h3>Class Constructor</h3>
 <form>
-<textarea>
-function Student() {
-	this.department = "Mathematics";
-	this.town = "Osijek";
-	console.log("Student constructor called.");
-}
+	<textarea>
+		alert(“This is the test”);
 
-var Pero = new Student();
-console.log(Pero);
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>
-A new JavaScript class is defined by creating a simple function.
-A "constructor" in JavaScript is just a function that happens to be called with the new operator.
-</pre>
+		//confirm(“Do you want to proceed?”);
 
-<h3>Class Constructor - example</h3>
-<form>
-<textarea>
-function Student(n) {
-	this.department = "Mathematics";
-	this.town = "Osijek";
-	this.name = n;
-	console.log(this);
-}
-
-var Pero = new Student("Pero");
-var Ivan = new Student("Ivan");
-
-//could we do this with Object?
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-
-<h3>Class properties and methods</h3>
-<form>
-<textarea>
-function Student() {
-	console.log("Student constructor called.");
-}
-
-Student.prototype = {
-	department: "Mathematics",
-	town: "Osijek",
-	test: function() { alert("Test called."); }
-};
-
-var Pero = new Student();
-console.log(Pero);
-//Pero.test();
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>Prototype allows you to add properties and methods to an object.</pre>
-
-<h3>Class - example</h3>
-<form>
-<textarea>
-function Student(n) {
-	this.name = n;
-}
-
-console.log(Student.prototype);
-
-Student.prototype.department = "Mathematics";
-Student.prototype.town = "Osijek";
-
-var Pero = new Student("Pero");
-console.log(Pero);
-
-//Student.prototype.name = "Ivan"; //changing prototype on the fly!
-//console.log(Pero);
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>Every JavaScript object has an internal property called Prototype. If you create a new object via "new SomeClass()", 
-the objects Prototype property will be set to the object referenced by "SomeClass.prototype".
-</pre>
-
-<h3>Object vs Class</h3>
-<form>
-<textarea>
-function Student(){};
-var Pero = new Student(); //Pero object is created out of class Student
-
-/*
-function Object() {}		//Object constructor (class) that exists in js engine
-var Pero = new Object();	//Pero object is created out of class Object
-var Pero = {}; 				//synonym of the above
-*/
-
-console.log(Pero);
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-
-
-<h2>Prototype Chain</h2>
-
-<h3>Inheritance</h3>
-<form class="large">
-<textarea>
-//MathStudent extends Student
-
-function MathStudent() {
-	this.department = "Mathematics";
-}
-function Student() {
-	this.university = "J.J. Strossmayer, Osijek";
-}
-
-MathStudent.prototype = new Student();			//inherits Student !!
-//MathStudent.prototype.constructor = Student;	//correct the constructor
-
-var Pero = new MathStudent();
-console.log(Pero);
-console.log(Pero instanceof Student);
-console.log(Pero instanceof MathStudent);
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>
-Inheritance is when one class extends another class, inheriting all its behaviour (properties and methods).
-</pre>
-
-<h3>Prototype Chain</h3>
-<form>
-<textarea>
-function MathStudent() {
-	this.department = "Mathematics";
-}
-function Student() {
-	this.university = "J.J. Strossmayer, Osijek";
-}
-
-MathStudent.prototype = new Student();	//MathStudent extends Student
-
-var Pero = new MathStudent();
-console.dir(Pero);	//shows full proto chain in debugger
-console.log(Pero.__proto__ == MathStudent.prototype);
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>proto (or __proto__) in debugger shows full inheritance chain. It's a pointer to prototype of the class that created that object. If property or method isn't found in current object, engine goes through prototype chain trying to find it.
-</pre>
-
-<h3>Prototype Chain</h3>
-<img src="assets/prototype.gif" />
-
-<h3>Native objects</h3>
-<form class="small">
-<textarea>
-var a = new Number(2);
-console.dir(a);	//shows proto chain for native object
-
-/*
-var a = 2;
-console.log(a.__proto__);
-console.log(a.__proto__.__proto__);
-console.log(a.__proto__.__proto__.__proto__);
-*/
-
-//console.log(a.constructor.prototype);
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>
-All objects in JavaScript are descended from object "Object", so all objects inherit methods and properties from Object.prototype.
-</pre>
-
-
-<h3>Extending native prototypes</h3>
-<form>
-<textarea>
-Object.prototype.lol = function() {
-	console.log(":]");
-};
-
-var n = 5;
-var b = false;
-
-n.lol();
-b.lol();
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>
-One mis-feature that is often used is to extend Object.prototype or one of the other built-in prototypes. While sometimes used by popular frameworks, there is still no good reason for cluttering built-in types with additional non-standard functionality.
-The only good reason for extending a built-in prototype is to backport the features of newer JavaScript engines; for example Array.forEach, etc.
-</pre>
-
-
-<h3>Questions</h3>
-<form>
-<textarea>
-//playground
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-
-
-<h3>Todo</h3>
-<pre>
-CodeAcademy courses - Objects I, Objects II
-http://www.codecademy.com/en/tracks/javascript
-</pre>
-
-<h3>Resources</h3>
-<pre>
-http://net.tutsplus.com/tutorials/javascript-ajax/prototypes-in-javascript-what-you-need-to-know/
-http://net.tutsplus.com/tutorials/javascript-ajax/the-basics-of-object-oriented-javascript/
-http://yehudakatz.com/2011/08/12/understanding-prototypes-in-javascript/
-http://mckoss.com/jscript/object.htm
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype
-http://dmitrysoshnikov.com/ecmascript/javascript-the-core/
-http://en.wikipedia.org/wiki/Prototype-based_programming
-http://ejohn.org/apps/learn/#64
-</pre>
-
-
-
-<!-- PART 2 --------------
-
-24.04. Advanced OO: this, scopes, closures, hoisting, references, namespaces, ... Inchoo.
-
--------------------------->
-
-<h2 id="part-2">Value vs. Reference</h2>
-
-<h3>Example 1</h3>
-<form>
-<textarea>
-var n = 2;
-var b = true;
-
-function changeMe(num, boo) {
-    num = 8;
-    boo = false;
-}
-
-changeMe(n, b);
-console.log(n, b);
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-
-<h3>Example 2</h3>
-<form>
-<textarea>
-var o = {'key1': 5, 'key2': 8};
-var a = [1, 2, 3];
-
-function changeMe(obj, arr) {
-    //add property to an object
-    //push new value in array
-}
-
-changeMe(o, a);
-console.log(o, a);
-
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-
-
-<h2>Context</h2>
-
-<h3>Example 1</h3>
-<form>
-<textarea>
-var Student = function() {
-    this.department = "Mathematics";
-};
-
-var s = new Student();
-console.log(s);
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>"this" references current object in execution. Context, the value of this = where are we currently, in which object. 
-Context is controlled by either the new keyword, in which case the context is the newly created object, or by how a function is invoked.
-</pre>
-
-<h3>Example 2</h3>
-<form>
-<textarea>
-var o = new Object();
-o.message = "Mathematics";
-
-o.logMessage = function() {
-	console.log(this.message);
-};
-
-o.logMessage();
-
-//write with Object short syntax with everything declared inside
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-
-<h3>Example 3</h3>
-<form class="">
-<textarea>
-var firstname = "Petra";
-var Student = {
-  firstname: "Pero",
-  logName: function() { console.log(this.firstname); }
-};
-
-Student.logName();
-
-var logName = Student.logName;
-logName();
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-
-
-<h3>The Window</h3>
-<form>
-<textarea>
-console.log(this);
-
-//what about functions?
-function test() {
-    console.log(this);
-}
-test();
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>The window object represents an open window in a browser. In browsers, everything happens inside window. The Matrix has you!</pre>
-
-
-<h3>The Window</h3>
-<form>
-<textarea>
-a = 5;
-function test() {
-};
-
-console.log(window.a);
-
-
-//declare your own string, log window, find your string
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>All global JavaScript objects, functions, and variables automatically become members of the window object.</pre>
-
-
-<h3>Changing function context</h3>
-<form>
-<textarea>
-//Function.call(this[, arg1, arg2, ...argN])
-//Function.apply(this[, arguments])
-
-function test(x, y) {
-	this.x = x;
-	this.y = y;
-	console.log(this);
-}
-test("Hello world", 1);
-
-var o1 = {};
-var o2 = {};
-
-test.call(o1, "Hello world", 1);
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>There is also new Function.bind(thisArg[, arg1[, arg2[, ...]]]).</pre>
-
-<h3>Namespaces</h3>
-<form>
-<textarea>
-a = 8;
-function test() {};
-
-var Inchoo = {};
-Inchoo.test = function() {}
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>Code is ussualy grouped in namespaces to seperate functionality and prevent value overwriting.</pre>
-
-
-<h3>Wrapping global code in function</h3>
-<form>
-<textarea>
-(function(){
-	var a = "Hello World";
-	var b = function() {
-	};
-	
-	console.log("Hello world");
-
-	//do something
-})();
-
-//window is clear here
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-
-<h3>Questions</h3>
-<form>
-<textarea>
-//playground
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-
-
-<h2>Variable Scope</h2>
-
-<h3>Global and local variables</h3>
-<form>
-<textarea>
-//what will be value of "a" in below example?
-var a = 1;
-function test() {
-	a = 1337;
-	b = 2;
-}
-
-test();
-console.log(a);
-console.log(b);
-
-//console.log(window.a);
-//what if we add "var a;" inside function?
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>If variable isn't set as local with "var", it will always be global in javascript.</pre>
-
-<h3>The Scope Chain</h3>
-<form>
-<textarea>
-var a = 1;
-function first(){
-	var b = 2;
-	function second(){
-		console.log(a,b);
-    }
-    second();
-}
-first();
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>
-When variable isn't found, javascript will climb up the scope chain trying to find it.
-This is why window object is acting like top most global in javascript.
-</pre>
-
-<h3>Local, global, property ..</h3>
-<form class="large">
-<textarea>
-var x = 1;
-var o = {
-	x:2,
-	test: function(){
-		var x = 3;
+		//prompt(“What’s your name?”,”Wouldn’t you like to know…”);
 		
-		console.log(x); 
-		console.log(this.x); 
-		console.log(window.x);
-	}
-}
-
-o.test();
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
+		//window.open(“http://midiman-midi.com”,”test”,”width=600,height=400,toolbar=no,location=no”);
+	</textarea>
+	<button type="button">Reset</button><button type="submit">Run</button>
 </form>
 
-<h3>Hoisting</h3>
+<h3></h3>
+<pre></pre>
 <form>
-<textarea>
-//what will be value of "a" in below example?
-
-var a = 1;
-function test() {
-	a = 1337;
-	var a;
-}
-
-test();
-console.log(a);
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
+	<textarea></textarea>
+	<button type="button">Reset</button><button type="submit">Run</button>
 </form>
-<pre>Variable declarations are hoisted, initializations are not. Declare your variables at the top !!</pre>
 
-<h3>Function Hoisting</h3>
+<h2>DOM - Document object model</h2>
+
+<h3>Html DOM</h3>
+<pre>
+	When a web page is loaded, the browser creates a Document Object Model of the page.
+	<img src="assets/bom.png" />
+</pre>
+<pre>
+The HTML DOM model is constructed as a tree of Objects:
+With the object model, JavaScript gets all the power it needs to create dynamic HTML	
+The HTML DOM is a standard object model and programming interface for HTML. 
+It defines:
+<ul>
+	<li>The HTML elements as objects</li>
+    	<li>The properties of all HTML elements</li>
+    	<li>The methods to access all HTML elements</li>
+    	<li>The events for all HTML elements</li>
+</ul>
+In the DOM, all HTML elements are defined as objects.
+
+Html tags + Text + Comments + .. (NODES)
+The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+
+Child, parent, sibling, ancestor, descendant.
+
+</pre>
+<h3>Document object</h3>
+<pre>
+The JavaScript Document object is the container for all HTML HEAD and BODY objects associated within the HTML tags of an HTML document. 
+The document object provides properties and methods to access all node objects, from within JavaScript.
+</pre>
+
 <form>
-<textarea>
-//will this work?
-test();
-
-function test() {
-    console.log("Test called");
-}
-
-//what if we declare test with var?
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
+	<textarea>
+		console.log(document);
+		
+		//var h1 = document.getElementsByTagName("H1")[0];
+	
+		//document.getElementById('test');
+	</textarea>
+	<button type="button">Reset</button><button type="submit">Run</button>
 </form>
 
-
-<h3>Closures</h3>
+<h3>Element object</h3>
+<pre>
+In the HTML DOM, the Element object represents an HTML element. Element objects can have child nodes of type element nodes, text nodes, or comment nodes. 
+A NodeList object represents a list of nodes, like an HTML element's collection of child nodes.
+Elements can also have attributes.
+</pre>
 <form>
-<textarea>
-var x = "global";
+	<textarea>
+		var att = document.createAttribute("id");
+		//att.value("test");
+		//h1.setAttributeNode(att); 
 
-function outer() {
-	var x = "local";
-  	
-    function inner() {
-    	console.log(x);
-    }
-    
-    return inner;
-}
-
-var inner = outer();
-inner();
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
+	</textarea>
+	<button type="button">Reset</button><button type="submit">Run</button>
 </form>
-<pre>Every JavaScript function forms a closure on creation. When you pass function to another scope, it takes its variable environment with it.</pre>
 
+<h3>DOM manipulation</h3>
 
-<h3>Closures</h3>
 <form>
-<textarea>
-//VariableEnvironment: {x: undefined};
-var x = "global";
-//VariableEnvironment: {x: "global"};
- 
-function outer() {
-    //VariableEnvironment: {x: undefined, outerLex: {x: "global"}};
-    var x = "local";    
-    //VariableEnvironment: {x: "local", outerLex: {x: "global"}};
- 
-    function inner() {
-        //VariableEnvironment: {x: undefined, outerLex: {x: "local", outerLex: {x:"global"}};
-        console.log(x);
-    }
-}
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
+	<textarea>
+		var newDiv = document.createElement(“div”);
+		//var newP = document.createElement(“p”);
+		//var newText = document.createTextNode(“New paragraph”);
+		//newP.appendChild(newText);
+		//newDiv.appendChild(newP);
+
+	// insertBefore(); replaceChild(); removeChild(); appendChild();
+
+	</textarea>
+	<button type="button">Reset</button><button type="submit">Run</button>
 </form>
-<pre>https://javascriptweblog.wordpress.com/2010/10/25/understanding-javascript-closures/</pre>
 
-
-<h3>Closures - example 1</h3>
+<h3>Selectors</h3>
+<pre>Oldies</pre>
 <form>
-<textarea>
-var Student = {
-    name: "Pero",
-    logName: function() {
-        console.log(this.name);
-    },
-    logNameAfterOneSecond: function() {
-        setTimeout(this.logName, 1000);
-    }
-};
-
-Student.logNameAfterOneSecond();
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
+	<textarea>
+		document.getElementById();
+		document.getElementsByTagName();
+		Element.getElementsByTagName();
+		document.getElementsByName(name);
+		document.anchors
+		document.forms
+		document.images
+		document.links
+	</textarea>
+	<button type="button">Reset</button><button type="submit">Run</button>
 </form>
 
-<h3>Closures - example 2</h3>
 <form>
-<textarea>
-var s = "Hello World";
-
-document.getElementById("test-link").onclick = function() {
-    console.log(this); 
-    console.log(s); 
-    return false; 
-}
-
-//document.getElementById("test-link").addEventListener("click", function() { console.log(s); });
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-<pre>In javascript you're often passing functions as callbacks, this is when closures are really useful.</pre>
-<a id="test-link" href="#test-link">Test Link</a>
-
-<h3>Closures - example 3</h3>
-<form>
-<textarea>
- var add = (function () {
-    var counter = 0;
-    return function () { return counter += 1; }
-})();
-
-console.log(add());
-console.log(add());
-console.log(add());
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
+	<textarea>
+		document.getElementsByClassName()
+		Element.getElementsByClassName()
+		element = document.querySelector(selectors);
+		elementList = document.querySelectorAll(selectors);
+	</textarea>
+	<button type="button">Reset</button><button type="submit">Run</button>
 </form>
 
-<h3>Closures - example 4</h3>
-<form class="large">
-<textarea>
-//private properties and methods
+<h2>Events</h2>
 
-(function(window){
-         
-    var a = 'foo', b = 'bar';
-   
-    function private(){
-        // do something
-    }
-       
-    window.Module = {
-       
-        public: function(){
-            // do something
-        }
-    };
-
-})(this);	
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-
-<h3>Questions</h3>
-<form class="large">
-<textarea>
-//playground
-</textarea>
-<button type="button">Reset</button><button type="submit">Run</button>
-</form>
-
-<h3>Todo</h3>
-<pre>http://ejohn.org/apps/learn/#48
-Go through this workshop one more time. Check resources.</pre>
+<pre>
+Events are signals generated when specific actions occur.
+JavaScript is aware of these signals, and scripts can be built to react to these events.
+</pre>
 
 <h3>Resources</h3>
 <pre>

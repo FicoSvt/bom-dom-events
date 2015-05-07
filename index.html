@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8"/>
-<title>Object-oriented Javascript</title>
+<title>BOM DOM Events</title>
 <link rel="stylesheet" href="engine/codemirror/codemirror.css">
 <link rel="stylesheet" href="engine/style.css">
 <style>
@@ -12,14 +12,14 @@
 
 <body class="slideshowX">
 
-<h1>Object-oriented Javascript</h1>
+<h1>BOM DOM Events</h1>
 
 <h2>Intro</h2>
 
 <h3>About Us</h3>
 <pre>
-Ivan Weiler - senior developer and educator, Inchoo
-http://inchoo.net/author/weiler/profile/
+Filip Svetličić - senior frontend developer, Inchoo
+http://inchoo.net/author/filip-svetlicic/
 
 Osijek Software City, http://softwarecity.hr
 J. J. Strossmayer University of Osijek – Department of Mathematics, http://www.mathos.unios.hr/
@@ -27,8 +27,8 @@ J. J. Strossmayer University of Osijek – Department of Mathematics, http://www
 
 <h3>Workshop URL</h3>
 <pre>
-http://ivanweiler.github.io/oo-javascript/
-(source at https://github.com/ivanweiler/oo-javascript/)
+http://ficosvt.github.io/bom-dom-events/
+(source at https://github.com/ficosvt/bom-dom-events/)
 </pre>
 
 <h3>Workshop user guide</h3>
@@ -61,7 +61,17 @@ http://jsfiddle.net Online code editor and playground. Register.
 </pre>
 
 
-<h2>Data Structures</h2>
+<h2>BOM - Browser object model</h2>
+
+<pre>
+All browsers are split into different parts (objects) that can be accessed trough Javascript. These parts are known as the Browser Object Model (BOM)
+Main object is Window and it’s at the top of the hierarchy. All global JavaScript objects, methods, and properties automatically become members of the window object.
+These allow you do things like, redirecting the user to a different web page, get the size of the browser window, access all the HTML elements on the page and, again, a whole lot more besides.
+Example of relations between objects in BOM
+
+<img src="assets/bom.png" />
+
+</pre>
 
 <h3>Basic types</h3>
 <form>
@@ -107,7 +117,7 @@ console.log(a1);
 <button type="button">Reset</button><button type="submit">Run</button>
 </form>
 <pre>Array has Keys and Values.
-"length" is property of String and Array only.
+"length" is property of String and Array only.i
 </pre>
 
 <h3>Array short syntax</h3>

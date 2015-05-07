@@ -1,7 +1,7 @@
-# Object-oriented Javascript
+# BOM DOM Events
 
-http://ivanweiler.github.io/oo-javascript/
+http://FicoSvt.github.io/bom-dom-events/
 
 Materials for workshop,  
 J. J. Strossmayer University of Osijek – Department of Mathematics,  
-April, 2015  
+May, 2015  

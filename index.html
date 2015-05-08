@@ -294,6 +294,29 @@ elementList = document.querySelectorAll(selectors);
 <button type="button">Reset</button><button type="submit">Run</button>
 </form>
 
+<form>
+<textarea>
+
+<ul class="level0">
+    <li>Level 1</li>
+    <li>Level 1</li>
+    <li>Level 1</li>
+    <li>Level 1</li>
+    <ul class="sub-level">
+        <li>Sub level</li>
+        <li>Sub level</li>
+        <li>Sub level</li>
+        <li>Sub level</li>
+    </ul>
+</ul>
+
+var el = document.querySelectorAll("ul.test > li");
+
+console.log(el);
+
+</textarea>
+</form>
+
 <h2>Events</h2>
 
 <pre>

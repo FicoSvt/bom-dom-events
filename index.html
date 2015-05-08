@@ -357,10 +357,8 @@ window.onload=hello
 	
 //<a id="click-me" href="http://inchoo.net" target="_blank">Click me</a>
 
-var hello = function () {
-return false;
+var hello = function (e) {
 alert("Hi");
-// e.preventDefault();
 }
 
 document.getElementById('click-me').addEventListener('click', hello());
@@ -390,7 +388,7 @@ touchcancel
 	
 //<a id="click-me-2" href="#">Click me 2</a>
 document.getElementById('click-me-2').addEventListener('click', function (event) {
-	return false;
+	event.preventDefault();
 	console.log(event);
 });
 
@@ -445,8 +443,10 @@ Event.stopPropagation();
 <h3>Common examples</h3>
 
 <pre>
-RTFM :)
+
 Which Element has which Event?
+
+RTFM :)
 
 </pre>
 

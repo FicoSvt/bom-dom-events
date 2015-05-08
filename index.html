@@ -288,7 +288,158 @@ elementList = document.querySelectorAll(selectors);
 <pre>
 Events are signals generated when specific actions occur.
 JavaScript is aware of these signals, and scripts can be built to react to these events.
+
+An event handler is a routine that is used to handle the event, allowing a programmer to write code that will be executed when the event occurs.
 </pre>
+
+<h3>DOM Level 0 model</h3>
+
+<pre>The oldest DOM implementation.
+Events are attached to elements and can be added in form of attributes or directly. 
+</pre>
+
+<form>
+<textarea>
+	
+var hello = function () {
+alert("Hi");
+}
+
+// old netscape model	
+<body onload="hello()"></div>
+
+window.onload=hello
+
+</textarea>
+<button type="button">Reset</button><button type="submit">Run</button>
+</form>
+
+<h3>DOM Level 2 model</h3>
+
+<pre>An event listener is a procedure or function in a computer program that waits for an event to occur; that event may be a user clicking or moving the mouse, pressing a key on the keyboard, or an internal timer or interrupt. The listener is in effect a loop that is programmed to react to an input or signal.</pre>
+
+<form>
+<textarea>
+	
+//<a id="click-me "href="#">Click me</a>
+
+var hello = function () {
+alert(“Hi”);
+return false;
+// e.preventDefault();
+}
+
+document.getElementById('click-me').addEventListener('click', hello);
+
+</textarea>
+<button type="button">Reset</button><button type="submit">Run</button>
+</form>
+<a id="click-me "href="http://inchoo.net">Click me</a>
+
+<h3>Common events</h3>
+
+<pre>click
+keydown,keyup,keypress
+load,unload
+mouseover,mouseout
+mousemoves
+scroll,
+submit
+touchstart
+touchmove
+touchend
+touchcancel
+</pre>
+
+<form>
+<textarea>
+	
+//<a id="click-me-2" href="#">Click me 2</a>
+document.getElementById('click-me-2').addEventListener('click', function (event) {
+	console.log(event);
+});
+
+window.addEventListener('keydown', function (event) {
+//console.log(event);
+	if (event.keyCode == 27) {
+	    alert("Escape");
+	}
+});
+
+</textarea>
+<button type="button">Reset</button><button type="submit">Run</button>
+</form>
+<a id="click-me-2" href="#">Click me 2</a>
+
+<h3>Cross browser compatibility</h3>
+
+<form>
+<textarea>
+	
+//[if lt IE 9]
+if (el.addEventListener) {
+ el.addEventListener('click', listener, false); 
+} else if (el.attachEvent)  {
+  el.attachEvent('onclick', listener);
+}
+
+</textarea>
+</form>
+
+<h3>Propagation</h3>
+<pre>
+<img src="assets/eventflow.png" />
+Capturing vs bubbling
+</pre>
+<form>
+<textarea>
+	
+<div>
+	<a>
+		<span>Click me</span>
+	</a>
+</div>
+
+</textarea>
+</form>
+<pre>
+Bubbling is default! Just remember that you're going from inside.
+Event.stopPropagation();
+</pre>
+
+<h3>Common examples</h3>
+
+<pre>
+RTFM :)
+Which Element has which Event?
+
+</pre>
+
+<form>
+<textarea>
+	
+for (i in window) {
+  if (/^on/.test(i)) { console.log(i); }
+}
+/*
+for (i in document.getElementById('click-me-4')) {
+  if (/^on/.test(i)) { console.log(i); }
+}
+*/
+
+</textarea>
+<button type="button">Reset</button><button type="submit">Run</button>
+</form>
+
+<h3>DOM ready</h3>
+
+<form>
+<textarea>
+document.addEventListener("DOMContentLoaded", function() {
+  // Code
+}, false);	
+</textarea>
+</form>
 
 <h3>Resources</h3>
 <pre>

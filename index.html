@@ -358,12 +358,12 @@ window.onload=hello
 //<a id="click-me" href="http://inchoo.net" target="_blank">Click me</a>
 
 var hello = function () {
-alert("Hi");
 return false;
+alert("Hi");
 // e.preventDefault();
 }
 
-document.getElementById('click-me').addEventListener('click', hello);
+document.getElementById('click-me').addEventListener('click', hello());
 
 </textarea>
 <button type="button">Reset</button><button type="submit">Run</button>

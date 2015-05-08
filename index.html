@@ -229,8 +229,14 @@ Elements can also have attributes.
 <textarea>
 	
 var att = document.createAttribute("id");
-//att.value("test");
-//h1.setAttributeNode(att); 
+
+att.value = "test";
+
+var h1 = document.getElementsByTagName("H1")[0];
+
+h1.setAttributeNode(att); 
+
+//console.log(h1);
 
 </textarea>
 <button type="button">Reset</button><button type="submit">Run</button>
